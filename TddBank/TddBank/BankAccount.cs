@@ -4,14 +4,22 @@
     {
         public decimal Balance { get; private set; }
 
-        public void Deposit(decimal v)
+        public void Deposit(decimal amount)
         {
-            throw new NotImplementedException();
+            if (amount <= 0)
+                throw new ArgumentException("Nicht 0 oder weniger");
+
+            Balance += amount;
         }
 
-        public void Withdraw(decimal v)
+        public void Withdraw(decimal amount)
         {
-            throw new NotImplementedException();
+            if (amount <= 0)
+                throw new ArgumentException("Nicht 0 oder weniger");
+            if (amount > Balance)
+                throw new InvalidOperationException("Nicht genug Geld!");
+
+            Balance -= amount;
         }
     }
 }
