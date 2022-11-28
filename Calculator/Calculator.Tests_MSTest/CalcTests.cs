@@ -5,6 +5,7 @@ namespace Calculator.Tests_MSTest
     public class CalcTests
     {
         [TestMethod]
+        [TestCategory("UnitTest")]
         public void Sum_2_and_3_results_5()
         {
             //Arrange
@@ -18,6 +19,7 @@ namespace Calculator.Tests_MSTest
         }
 
         [TestMethod]
+        [TestCategory("UnitTest")]
         public void Sum_1240_and_500_results_1740()
         {
             //Arrange
