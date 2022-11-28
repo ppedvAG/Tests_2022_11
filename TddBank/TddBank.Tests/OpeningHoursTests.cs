@@ -1,4 +1,7 @@
 ﻿
+using Microsoft.QualityTools.Testing.Fakes;
+using System.Reflection.Metadata.Ecma335;
+
 namespace TddBank.Tests
 {
     public class OpeningHoursTests
@@ -22,6 +25,42 @@ namespace TddBank.Tests
             var oh = new OpeningHours();
 
             Assert.Equal(exp, oh.IsOpen(dt));
+        }
+
+        [Fact]
+        public void IsWeekend()
+        {
+            var oh = new OpeningHours();
+
+            using (ShimsContext.Create())
+            {
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2022, 11, 28);
+                Assert.False(oh.IsWeekend());
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2022, 11, 29);
+                Assert.False(oh.IsWeekend());
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2022, 11, 30);
+                Assert.False(oh.IsWeekend());
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2022, 12, 1);
+                Assert.False(oh.IsWeekend());
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2022, 12, 2);
+                Assert.False(oh.IsWeekend());
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2022, 12, 3);
+                Assert.True(oh.IsWeekend());
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2022, 12, 4);
+                Assert.True(oh.IsWeekend());
+            }
+        }
+
+        [Fact]
+        public void CanReadConfFile()
+        {
+            var oh = new OpeningHours();
+            using (ShimsContext.Create())
+            {
+                System.IO.Fakes.ShimStreamReader.ConstructorString = (sr, path) => { };
+                System.IO.Fakes.ShimStreamReader.AllInstances.ReadToEnd = (sr) => "Bier";
+                oh.ReaderConfFile();
+            }
         }
     }
 }

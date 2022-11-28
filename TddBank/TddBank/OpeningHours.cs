@@ -18,5 +18,39 @@
 
             return false;
         }
+
+        //public bool IsWeekend() => IsWeekend(DateTime.Now);
+
+        //public bool IsWeekend(DateTime dt)
+        //{
+        //    if (dt.DayOfWeek == DayOfWeek.Saturday ||
+        //        dt.DayOfWeek == DayOfWeek.Sunday)
+        //        return true;
+        //    else
+        //        return false;
+        //}
+
+        public bool IsWeekend()
+        {
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Saturday ||
+                DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
+                return true;
+            else
+                return false;
+        }
+
+        public void ReaderConfFile()
+        {
+            using (var sr = new StreamReader(@"b:\\textst.txt"))
+            {
+                var txt = sr.ReadToEnd();
+
+                if (txt.Contains("Bier"))
+                    Console.WriteLine(txt);
+                else
+                    Console.WriteLine(":-(");
+            }
+
+        }
     }
 }
