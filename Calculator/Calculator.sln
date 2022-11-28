@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Tests_MSTest", "Calculator.Tests_MSTest\Calculator.Tests_MSTest.csproj", "{2FF1A6BA-C828-4C6A-980F-0907DE0D865B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Tests_NUnit", "Calculator.Tests_NUnit\Calculator.Tests_NUnit.csproj", "{FEF453F4-D199-4F2A-9790-A05EDCA1AD84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2FF1A6BA-C828-4C6A-980F-0907DE0D865B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FF1A6BA-C828-4C6A-980F-0907DE0D865B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FF1A6BA-C828-4C6A-980F-0907DE0D865B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEF453F4-D199-4F2A-9790-A05EDCA1AD84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEF453F4-D199-4F2A-9790-A05EDCA1AD84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEF453F4-D199-4F2A-9790-A05EDCA1AD84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF453F4-D199-4F2A-9790-A05EDCA1AD84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
