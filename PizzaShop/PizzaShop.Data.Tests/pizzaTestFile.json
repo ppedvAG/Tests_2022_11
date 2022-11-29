@@ -1,0 +1,40 @@
+[
+  {
+    "Name": "P1",
+    "Durchmesser": 0,
+    "Belaege": [
+      {
+        "Name": "Salami",
+        "KCal": 0,
+        "Vegetarisch": false,
+        "Preis": 0
+      }
+    ],
+    "BasisPreis": 4
+  },
+  {
+    "Name": "P2",
+    "Durchmesser": 0,
+    "Belaege": [
+      {
+        "Name": "Salami",
+        "KCal": 0,
+        "Vegetarisch": false,
+        "Preis": 0
+      },
+      {
+        "Name": "Schinken",
+        "KCal": 0,
+        "Vegetarisch": false,
+        "Preis": 0
+      }
+    ],
+    "BasisPreis": 4.2
+  },
+  {
+    "Name": "P3",
+    "Durchmesser": 0,
+    "Belaege": [],
+    "BasisPreis": 4.6
+  }
+]
