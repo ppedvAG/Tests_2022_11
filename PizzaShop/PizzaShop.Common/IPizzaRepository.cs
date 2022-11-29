@@ -1,4 +1,4 @@
-﻿namespace PizzaShop.Data
+﻿namespace PizzaShop.Common
 {
     public interface IPizzaRepository
     {

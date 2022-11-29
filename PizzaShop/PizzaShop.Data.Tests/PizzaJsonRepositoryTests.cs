@@ -1,4 +1,5 @@
 using FluentAssertions;
+using PizzaShop.Common;
 
 namespace PizzaShop.Data.Tests
 {

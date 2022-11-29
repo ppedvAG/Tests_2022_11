@@ -1,4 +1,5 @@
 using Moq;
+using PizzaShop.Common;
 using PizzaShop.Data;
 
 namespace PizzaShop.Logic.Tests

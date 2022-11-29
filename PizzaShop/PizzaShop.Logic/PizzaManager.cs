@@ -1,4 +1,5 @@
-﻿using PizzaShop.Data;
+﻿using PizzaShop.Common;
+using PizzaShop.Data;
 
 namespace PizzaShop.Logic
 {
@@ -16,12 +17,11 @@ namespace PizzaShop.Logic
             return pizza.BasisPreis + pizza.Belaege.Sum(x => x.Preis);
         }
 
-        public Pizza GetCheapestPizza()
+        public Pizza? GetCheapestPizza()
         {
             var allPizzas = Repository.LoadPizzas("PizzaDb.json");
 
             return allPizzas.OrderBy(x => CalcPizzaPreis(x)).FirstOrDefault();
         }
-
     }
 }
